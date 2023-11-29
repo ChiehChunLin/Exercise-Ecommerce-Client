@@ -1,0 +1,59 @@
+footer {
+  background-color: rgb(163, 190, 238);
+  color: white;
+
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+
+  .info {
+    margin: 0.5rem;
+    padding-left: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex: 5 1 700px;
+    h1 {
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    ul {
+      display: flex;
+      text-align: left;
+      align-items: center;
+      li {
+        display: flex;
+        align-items: flex-start;
+        justify-content: left;
+        padding: 0rem 1rem;
+      }
+    }
+    p {
+      margin: 0;
+      font-size: 0.75rem;
+    }
+  }
+  .icons {
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex: 5 1 300px;
+    a {
+      font-size: 2rem;
+      padding: 1rem 1rem;
+    }
+  }
+  .h-line {
+    margin: 0.5rem;
+    height: 1px;
+    width: 100%;
+    background-color: white;
+  }
+  .warning {
+    margin: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

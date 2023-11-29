@@ -1,0 +1,63 @@
+header {
+  display: flex;
+  justify-content: center;
+  height: min-content;
+  width: 100%;
+  padding: 0.8rem;
+
+  //讓標頭頁固定在網頁上方
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: white;
+  box-shadow: 3px 3px 5px 1px #7c7c7c;
+
+  .logo {
+    display: flex;
+    justify-content: right;
+    width: 100%;
+    margin: 0.5rem;
+
+    svg {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      z-index: 0;
+    }
+
+    .user {
+      display: flex;
+      width: min-content;
+      position: absolute;
+      top: 0.5rem;
+      z-index: 1;
+      a {
+        padding: 0.25rem;
+        i {
+          font-size: 1.5rem;
+          color: #0d6efd;
+        }
+        i:hover {
+          color: #0a58ca;
+        }
+      }
+    }
+  }
+}
+
+.visible {
+  /* display: flex; */
+  top: 0;
+  transition: top 0.4s ease-out;
+}
+
+.hidden {
+  /* display: none; */
+  top: -800px;
+  transition: top 0.4s ease-out;
+}
