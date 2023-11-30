@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 //ref: https://www.freecodecamp.org/news/build-an-image-carousel-with-react-and-framer-motion/
 
@@ -28,46 +27,28 @@ const ImageCarouselComponent = ({ images }) => {
   };
 
   return (
-    <div className="carousel">
-      {/* <img key={currentIndex} src={images[currentIndex]} /> */}
+    <div className="imgCarousel">
+      <div className="carousel">
+        <div className="display">
+          <div className="slide_direction left" onClick={handlePrevious}>
+            <i className="fi fi-sr-angle-circle-left"></i>
+          </div>
+          <img key={currentIndex} src={images[currentIndex]} alt="test" />
 
-      <div className="indicator">
-        <div className="slide_direction left" onClick={handlePrevious}>
-          <i className="fi fi-sr-angle-circle-left"></i>
+          <div className="slide_direction right" onClick={handleNext}>
+            <i className="fi fi-sr-angle-circle-right"></i>
+          </div>
         </div>
-        <img key={currentIndex} src={images[currentIndex]} alt="test" />
-
-        {/* {images.map((_, index) => (
-          <div
-            key={index}
-            className={`dot ${currentIndex === index ? "active" : ""}`}
-            onClick={() => handleDotClick(index)}
-          ></div>
-        ))} */}
-
-        <div className="slide_direction right" onClick={handleNext}>
-          <i className="fi fi-sr-angle-circle-right"></i>
+        <div className="indicator">
+          {images.map((_, index) => (
+            <div
+              key={index}
+              className={`dot ${currentIndex === index ? "slick-active" : ""}`}
+              onClick={() => handleDotClick(index)}
+            ></div>
+          ))}
         </div>
       </div>
-      {/* <div className="dotSerial">
-        <ul>
-          <li className="slick-active">
-            <button>●</button>
-          </li>
-          <li className="">
-            <button>○</button>
-          </li>
-          <li className="">
-            <button>○</button>
-          </li>
-          <li className="">
-            <button>○</button>
-          </li>
-          <li className="">
-            <button>○</button>
-          </li>
-        </ul>
-      </div> */}
     </div>
   );
 };

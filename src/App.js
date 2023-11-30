@@ -2,8 +2,12 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderComponent from "./components/header-component";
 import NavComponent from "./components/nav-component";
-import HomeComponent from "./components/home-component";
+import HomeComponent from "./pages/home-component";
 import FootComponent from "./components/footer-component";
+import LoginComponent from "./pages/login-component";
+import RegisterComponent from "./pages/register-component";
+import ProfileComponent from "./pages/profile-component";
+import PurchaseComponent from "./pages/purchase-component";
 import "./styles/style.css";
 import "../node_modules/@flaticon/flaticon-uicons/css/all/all.css";
 import image1 from "./images/promotion/christmas_card.jpg";
@@ -29,6 +33,10 @@ function App() {
             <HomeComponent PromotionPhotoCarousel={PromotionPhotoCarousel} />
           }
         />
+        <Route path="/login" exact element={<LoginComponent />} />
+        <Route path="/register" exact element={<RegisterComponent />} />
+        <Route path="/profile" exact element={<ProfileComponent />} />
+        <Route path="/purchase" exact element={<PurchaseComponent />} />
       </Routes>
       <FootComponent />
     </div>
