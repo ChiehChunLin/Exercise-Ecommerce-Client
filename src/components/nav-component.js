@@ -31,8 +31,8 @@ const NavComponent = () => {
           </Link>
         </li>
         <li>
-          <Link className="nav-link" to="/purchase">
-            Purchase
+          <Link className="nav-link" to="/shoppingCart">
+            ShoppingCart
           </Link>
         </li>
         <li>

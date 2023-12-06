@@ -2,12 +2,12 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HeaderComponent from "./components/header-component";
 import NavComponent from "./components/nav-component";
-import HomeComponent from "./pages/home-component";
 import FootComponent from "./components/footer-component";
-import LoginComponent from "./pages/login-component";
-import RegisterComponent from "./pages/register-component";
-import ProfileComponent from "./pages/profile-component";
-import PurchaseComponent from "./pages/purchase-component";
+import Home from "./pages/home";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Profile from "./pages/profile";
+import ShoppingCart from "./pages/shoppingCart";
 import "./styles/style.css";
 import "../node_modules/@flaticon/flaticon-uicons/css/all/all.css";
 import image1 from "./images/promotion/christmas_card.jpg";
@@ -29,14 +29,12 @@ function App() {
         <Route
           path="/"
           exact
-          element={
-            <HomeComponent PromotionPhotoCarousel={PromotionPhotoCarousel} />
-          }
+          element={<Home PromotionPhotoCarousel={PromotionPhotoCarousel} />}
         />
-        <Route path="/login" exact element={<LoginComponent />} />
-        <Route path="/register" exact element={<RegisterComponent />} />
-        <Route path="/profile" exact element={<ProfileComponent />} />
-        <Route path="/purchase" exact element={<PurchaseComponent />} />
+        <Route path="/login" exact element={<Login />} />
+        <Route path="/register" exact element={<Register />} />
+        <Route path="/profile" exact element={<Profile />} />
+        <Route path="/shoppingCart" exact element={<ShoppingCart />} />
       </Routes>
       <FootComponent />
     </div>

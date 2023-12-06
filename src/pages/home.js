@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import ImageCarousel from "../components/imageCarousel-component";
 
-const HomeComponent = (props) => {
+const HomePage = (props) => {
   let { PromotionPhotoCarousel } = props;
   return (
     <main>
@@ -15,4 +15,4 @@ const HomeComponent = (props) => {
   );
 };
 
-export default HomeComponent;
+export default HomePage;

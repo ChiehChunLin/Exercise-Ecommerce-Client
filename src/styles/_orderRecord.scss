@@ -1,0 +1,53 @@
+.orderBlock {
+  margin: 0.5rem 0rem;
+  table,
+  th,
+  td {
+    border-collapse: collapse;
+    border: solid 2px rgb(147, 147, 147);
+  }
+
+  table {
+    width: 100%;
+    height: min-content;
+
+    td,
+    tr {
+      .imageTd {
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+
+        .imageShort {
+          overflow: hidden;
+          width: 120px;
+          height: 80px;
+          margin-right: 1rem;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+      }
+      .left {
+        text-align: left;
+        width: 80%;
+      }
+      .right {
+        width: 20%;
+        text-align: right;
+      }
+      button {
+        border: solid 1px black;
+        border-radius: 25%;
+        background-color: rgba(163, 190, 238, 0.5);
+        padding: 0.3rem;
+        margin: 0.5rem;
+        width: 85px;
+      }
+    }
+  }
+}

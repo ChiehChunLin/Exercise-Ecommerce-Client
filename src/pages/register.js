@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 // import AuthService from "../services/auth_service";
 
-const RegisterComponent = () => {
+const RegisterPage = () => {
   //   const navigate = useNavigate();
   //   let [username, setUsername] = useState("");
   //   let [email, setEmail] = useState("");
   //   let [password, setPassword] = useState("");
   //   let [role, setRole] = useState("");
   //   let [message, setMessage] = useState("");
+  let [gender, setGender] = useState("male");
   let [showPassword, setShowPassword] = useState(false);
 
   //   //Event Listener Handler
@@ -24,6 +25,12 @@ const RegisterComponent = () => {
   //   const RoleHandler = (e) => {
   //     setRole(e.target.value);
   //   };
+  const GenderHandlerMale = (e) => {
+    setGender("male");
+  };
+  const GenderHandlerFemale = (e) => {
+    setGender("female");
+  };
   //   const RegisterHandler = (e) => {
   //     AuthService.register(username, email, password, role)
   //       .then(() => {
@@ -91,11 +98,26 @@ const RegisterComponent = () => {
         </div>
         <br />
         <div className="form-group">
-          <label for="gender">Gender：</label>
-          <input id="male" type="radio" name="gender" value="male" checked />
-          <label for="male">男性{"\t"}</label>
-          <input id="female" type="radio" name="gender" value="female" />
-          <label for="female">女性</label>
+          <div className="gender">
+            <label for="gender">Gender : </label>
+            <input
+              id="male"
+              type="radio"
+              name="gender"
+              value="male"
+              checked
+              onChange={GenderHandlerMale}
+            />
+            <label for="male">男性 </label>
+            <input
+              id="female"
+              type="radio"
+              name="gender"
+              value="female"
+              onChange={GenderHandlerFemale}
+            />
+            <label for="female">女性</label>
+          </div>
         </div>
         <br />
         <div className="form-group">
@@ -143,4 +165,4 @@ const RegisterComponent = () => {
   );
 };
 
-export default RegisterComponent;
+export default RegisterPage;

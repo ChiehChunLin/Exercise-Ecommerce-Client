@@ -13,8 +13,8 @@ nav ul {
       font-size: 1.5rem;
       // color: white;
     }
-  }
-  li:hover {
-    background-color: lightyellow;
+    &:hover {
+      background-color: lightyellow;
+    }
   }
 }

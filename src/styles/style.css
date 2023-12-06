@@ -155,32 +155,6 @@ footer .warning {
   justify-content: center;
 }
 
-main {
-  margin: 2rem;
-}
-main .promotion {
-  justify-content: center;
-}
-main .promotion h1,
-main .promotion h2 {
-  text-align: center;
-}
-main .promotion h1 {
-  color: green;
-}
-main .promotion h2 {
-  color: rgb(187, 11, 11);
-}
-main .promotion .img_container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-main .promotion .img_container img {
-  width: 60vw;
-  height: 40vw;
-}
-
 .imgCarousel {
   display: flex;
   align-items: center;
@@ -249,4 +223,165 @@ main .promotion .img_container img {
 }
 .imgCarousel .carousel .indicator .slick-active {
   background-color: #0a58ca;
+}
+
+.product {
+  border: solid 2px rgb(147, 147, 147);
+  width: 20vw;
+  height: 35vh;
+  padding: 0.5rem 1rem;
+  margin-right: 1rem;
+}
+.product .icon {
+  text-align: right;
+  align-items: right;
+}
+.product .imageContainer {
+  border: solid 1px green;
+  overflow: hidden;
+  width: 17vw;
+  height: 11vw;
+  display: flex;
+  align-items: center;
+}
+.product .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.product .info {
+  margin-top: 0.5rem;
+}
+.product .info p {
+  margin: 0;
+}
+.product .info #slogen {
+  background-color: rgb(233, 233, 233);
+  color: red;
+}
+.product .info #name {
+  padding: 0.5rem 0rem;
+  font-size: large;
+  font-weight: bold;
+  color: blue;
+}
+.product .info .money {
+  display: flex;
+}
+.product .info .money .price,
+.product .info .money .discount {
+  min-width: 50%;
+}
+.product .info .money .price {
+  color: gray;
+  text-decoration: line-through;
+}
+.product .info .money .discount {
+  color: red;
+}
+
+.orderBlock {
+  margin: 0.5rem 0rem;
+}
+.orderBlock table,
+.orderBlock th,
+.orderBlock td {
+  border-collapse: collapse;
+  border: solid 2px rgb(147, 147, 147);
+}
+.orderBlock table {
+  width: 100%;
+  height: -moz-min-content;
+  height: min-content;
+}
+.orderBlock table td .imageTd,
+.orderBlock table tr .imageTd {
+  border: none;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.orderBlock table td .imageTd .imageShort,
+.orderBlock table tr .imageTd .imageShort {
+  overflow: hidden;
+  width: 120px;
+  height: 80px;
+  margin-right: 1rem;
+}
+.orderBlock table td .imageTd .imageShort img,
+.orderBlock table tr .imageTd .imageShort img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.orderBlock table td .left,
+.orderBlock table tr .left {
+  text-align: left;
+  width: 80%;
+}
+.orderBlock table td .right,
+.orderBlock table tr .right {
+  width: 20%;
+  text-align: right;
+}
+.orderBlock table td button,
+.orderBlock table tr button {
+  border: solid 1px black;
+  border-radius: 25%;
+  background-color: rgba(163, 190, 238, 0.5);
+  padding: 0.3rem;
+  margin: 0.5rem;
+  width: 85px;
+}
+
+main {
+  margin: 2rem;
+}
+main .promotion {
+  justify-content: center;
+}
+main .promotion h1,
+main .promotion h2 {
+  text-align: center;
+}
+main .promotion h1 {
+  color: green;
+}
+main .promotion h2 {
+  color: rgb(187, 11, 11);
+}
+main .promotion .img_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+main .promotion .img_container img {
+  width: 60vw;
+  height: 40vw;
+}
+
+.gender label,
+.gender input {
+  padding-right: 1rem;
+}
+
+.profile {
+  padding: 1rem 2rem;
+}
+.profile h1 {
+  color: blue;
+}
+.profile h3 {
+  margin: 1rem 0rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  color: white;
+  background-color: rgb(174, 199, 241);
+}
+.profile .personal_favorite {
+  display: flex;
+  flex-wrap: wrap;
 }/*# sourceMappingURL=style.css.map */

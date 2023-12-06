@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router";
 // import AuthService from "../services/auth_service";
 
-const LoginComponent = () => {
+const LoginPage = () => {
   //   let { currentUser, setCurrentUser } = props;
   //   const navigate = useNavigate();
   //   let [email, setEmail] = useState("");
@@ -74,4 +74,4 @@ const LoginComponent = () => {
   );
 };
 
-export default LoginComponent;
+export default LoginPage;
