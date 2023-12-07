@@ -5,6 +5,7 @@ import image1 from "../images/cars/Ford.jpg";
 import image2 from "../images/cars/BMW.jpg";
 import image3 from "../images/cars/Toyota.jpg";
 import image4 from "../images/cars/Mercedes-Benz.jpg";
+import image5 from "../images/cars/Maserati.jpg";
 // import AuthService from "../services/auth_service";
 
 const ProfilePage = () => {
@@ -37,19 +38,38 @@ const ProfilePage = () => {
     price: 350,
     discount: 290,
   };
-  let products = [product1, product2, product3, product4];
+  const product5 = {
+    slogen: "Outstanding",
+    name: "Maserati MC20 ",
+    image: image5,
+    price: 1580,
+    discount: 1380,
+  };
+  let products = [product1, product2, product3, product4, product5];
 
   const order1 = {
     orderNumber: 231114012883,
     orderStatus: "已送達",
-    orderGoods: [product1, product2],
+    orderGoods: [
+      [product1, 1],
+      [product2, 2],
+    ],
   };
   const order2 = {
     orderNumber: 202311287487,
     orderStatus: "配送中",
-    orderGoods: [product2, product3, product4],
+    orderGoods: [
+      [product2, 1],
+      [product3, 2],
+      [product4, 3],
+    ],
   };
-  let orders = [order1, order2];
+  const order3 = {
+    orderNumber: 202311249527,
+    orderStatus: "備貨中",
+    orderGoods: [[product5, 1]],
+  };
+  let orders = [order1, order2, order3];
   return (
     <div className="profile">
       {/* {!currentUser && (

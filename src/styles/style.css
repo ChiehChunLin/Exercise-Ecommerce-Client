@@ -21,6 +21,10 @@ button {
   background: none;
 }
 
+.HighLight {
+  color: orangered;
+}
+
 header {
   display: flex;
   justify-content: center;
@@ -230,6 +234,7 @@ footer .warning {
   width: 20vw;
   height: 35vh;
   padding: 0.5rem 1rem;
+  margin-top: 1rem;
   margin-right: 1rem;
 }
 .product .icon {
@@ -288,12 +293,16 @@ footer .warning {
 .orderBlock th,
 .orderBlock td {
   border-collapse: collapse;
-  border: solid 2px rgb(147, 147, 147);
+  border: solid 1px rgb(147, 147, 147);
 }
 .orderBlock table {
   width: 100%;
   height: -moz-min-content;
   height: min-content;
+}
+.orderBlock table td,
+.orderBlock table tr {
+  min-height: 1rem;
 }
 .orderBlock table td .imageTd,
 .orderBlock table tr .imageTd {
@@ -309,6 +318,11 @@ footer .warning {
   width: 120px;
   height: 80px;
   margin-right: 1rem;
+  display: flex;
+  justify-content: right;
+  align-items: end;
+  position: relative;
+  z-index: 0;
 }
 .orderBlock table td .imageTd .imageShort img,
 .orderBlock table tr .imageTd .imageShort img {
@@ -316,6 +330,23 @@ footer .warning {
   height: 100%;
   -o-object-fit: fill;
      object-fit: fill;
+}
+.orderBlock table td .imageTd .imageShort .count,
+.orderBlock table tr .imageTd .imageShort .count {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  border-radius: 50%;
+  width: 20%;
+  height: 25%;
+  position: absolute;
+  top: 0;
+  z-index: 5;
+}
+.orderBlock table td .imageTd .imageShort .count p,
+.orderBlock table tr .imageTd .imageShort .count p {
+  font-size: small;
+  text-align: center;
+  align-items: center;
 }
 .orderBlock table td .left,
 .orderBlock table tr .left {
@@ -330,11 +361,15 @@ footer .warning {
 .orderBlock table td button,
 .orderBlock table tr button {
   border: solid 1px black;
-  border-radius: 25%;
+  border-radius: 10%;
   background-color: rgba(163, 190, 238, 0.5);
   padding: 0.3rem;
   margin: 0.5rem;
   width: 85px;
+}
+.orderBlock table td button:hover,
+.orderBlock table tr button:hover {
+  background-color: lightyellow;
 }
 
 main {
@@ -384,4 +419,117 @@ main .promotion .img_container img {
 .profile .personal_favorite {
   display: flex;
   flex-wrap: wrap;
+}
+
+.shoppingCart {
+  margin: 1rem;
+  height: -moz-min-content;
+  height: min-content;
+}
+.shoppingCart .shoppinglist {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.shoppingCart .shoppinglist h2 {
+  font-size: x-large;
+  color: orangered;
+  background-color: lightgray;
+}
+.shoppingCart .shoppinglist table,
+.shoppingCart .shoppinglist th,
+.shoppingCart .shoppinglist td {
+  min-width: 2rem;
+  border-collapse: collapse;
+  border: solid 1px rgb(147, 147, 147);
+}
+.shoppingCart .shoppinglist table {
+  width: 60%;
+  height: -moz-min-content;
+  height: min-content;
+}
+.shoppingCart .shoppinglist table #td1,
+.shoppingCart .shoppinglist table #td2 {
+  text-align: center;
+  justify-content: center;
+}
+.shoppingCart .shoppinglist table #td3,
+.shoppingCart .shoppinglist table #td4 {
+  width: 35%;
+}
+.shoppingCart .shoppinglist table td,
+.shoppingCart .shoppinglist table tr {
+  min-height: 1rem;
+}
+.shoppingCart .shoppinglist table td .imageContainer,
+.shoppingCart .shoppinglist table tr .imageContainer {
+  margin: 0.5rem;
+  overflow: hidden;
+  width: 12vw;
+  height: 8vw;
+  display: flex;
+  align-content: center;
+}
+.shoppingCart .shoppinglist table td .imageContainer img,
+.shoppingCart .shoppinglist table tr .imageContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.shoppingCart .shoppinglist table td .info,
+.shoppingCart .shoppinglist table tr .info {
+  margin: 0.5rem;
+  height: 8vw;
+  position: relative;
+}
+.shoppingCart .shoppinglist table td .info .up,
+.shoppingCart .shoppinglist table tr .info .up {
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+.shoppingCart .shoppinglist table td .info .bottom,
+.shoppingCart .shoppinglist table tr .info .bottom {
+  width: 100%;
+  bottom: 0;
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+}
+.shoppingCart .shoppinglist table td .info .bottom .price,
+.shoppingCart .shoppinglist table tr .info .bottom .price {
+  width: 50%;
+  color: gray;
+  text-decoration: line-through;
+}
+.shoppingCart .shoppinglist table td .info .bottom .discount,
+.shoppingCart .shoppinglist table tr .info .bottom .discount {
+  width: 50%;
+  color: red;
+}
+.shoppingCart .shoppinglist table td .info .right,
+.shoppingCart .shoppinglist table tr .info .right {
+  justify-content: right;
+  text-align: right;
+}
+.shoppingCart .shoppinglist table td .info .right button,
+.shoppingCart .shoppinglist table tr .info .right button {
+  background-color: rgba(163, 190, 238, 0.5);
+  padding: 0rem 0.5rem;
+  margin: 0rem 0.5rem;
+  border-radius: 10%;
+}
+.shoppingCart .shoppinglist table td .info p,
+.shoppingCart .shoppinglist table tr .info p {
+  padding: 0;
+  margin: 0;
+  height: -moz-min-content;
+  height: min-content;
+  text-align: right;
+}
+.shoppingCart .shoppinglist table td .info #qty,
+.shoppingCart .shoppinglist table tr .info #qty {
+  width: 4rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,108 @@
+.shoppingCart {
+  //   border: solid 2px rgb(147, 147, 147);
+  margin: 1rem;
+  height: min-content;
+
+  .shoppinglist {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      font-size: x-large;
+      color: orangered;
+      background-color: lightgray;
+    }
+    table,
+    th,
+    td {
+      min-width: 2rem;
+      border-collapse: collapse;
+      border: solid 1px rgb(147, 147, 147);
+    }
+
+    table {
+      width: 60%;
+      height: min-content;
+
+      #td1,
+      #td2 {
+        text-align: center;
+        justify-content: center;
+      }
+      #td3,
+      #td4 {
+        width: 35%;
+      }
+
+      td,
+      tr {
+        min-height: 1rem;
+
+        .imageContainer {
+          margin: 0.5rem;
+          overflow: hidden;
+          width: 12vw;
+          height: 8vw;
+          display: flex;
+          align-content: center;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+          }
+        }
+
+        .info {
+          margin: 0.5rem;
+          height: 8vw;
+          position: relative;
+
+          .up {
+            width: 100%;
+            top: 0;
+            position: absolute;
+          }
+          .bottom {
+            width: 100%;
+            bottom: 0;
+            position: absolute;
+
+            display: flex;
+            flex-wrap: wrap;
+            .price {
+              width: 50%;
+              color: gray;
+              text-decoration: line-through;
+            }
+            .discount {
+              width: 50%;
+              color: red;
+            }
+          }
+
+          .right {
+            justify-content: right;
+            text-align: right;
+            button {
+              background-color: rgb(163, 190, 238, 0.5);
+              padding: 0rem 0.5rem;
+              margin: 0rem 0.5rem;
+              border-radius: 10%;
+            }
+          }
+          p {
+            padding: 0;
+            margin: 0;
+            height: min-content;
+            text-align: right;
+          }
+          #qty {
+            width: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

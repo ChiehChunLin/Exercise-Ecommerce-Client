@@ -19,6 +19,10 @@ button {
   background: none;
 }
 
+.HighLight {
+  color: orangered;
+}
+
 @import "./header";
 @import "./nav";
 @import "./footer";
@@ -29,3 +33,4 @@ button {
 @import "./pageHome";
 @import "./pageRegister";
 @import "./pageProfile";
+@import "./pageShoppingCart";

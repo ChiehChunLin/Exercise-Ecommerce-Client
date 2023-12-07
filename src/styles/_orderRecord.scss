@@ -4,7 +4,7 @@
   th,
   td {
     border-collapse: collapse;
-    border: solid 2px rgb(147, 147, 147);
+    border: solid 1px rgb(147, 147, 147);
   }
 
   table {
@@ -13,6 +13,7 @@
 
     td,
     tr {
+      min-height: 1rem;
       .imageTd {
         border: none;
         display: flex;
@@ -25,10 +26,31 @@
           width: 120px;
           height: 80px;
           margin-right: 1rem;
+
+          display: flex;
+          justify-content: right;
+          align-items: end;
+          position: relative;
+          z-index: 0;
           img {
             width: 100%;
             height: 100%;
             object-fit: fill;
+          }
+          .count {
+            background-color: rgba(255, 0, 0, 0.5);
+            color: white;
+            border-radius: 50%;
+            width: 20%;
+            height: 25%;
+            position: absolute;
+            top: 0;
+            z-index: 5;
+            p {
+              font-size: small;
+              text-align: center;
+              align-items: center;
+            }
           }
         }
       }
@@ -40,13 +62,17 @@
         width: 20%;
         text-align: right;
       }
+
       button {
         border: solid 1px black;
-        border-radius: 25%;
+        border-radius: 10%;
         background-color: rgba(163, 190, 238, 0.5);
         padding: 0.3rem;
         margin: 0.5rem;
         width: 85px;
+        &:hover {
+          background-color: lightyellow;
+        }
       }
     }
   }
